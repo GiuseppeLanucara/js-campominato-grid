@@ -26,4 +26,5 @@ let arr=[n];
 for (i=n;i<=100;i++) {
 arr[i]=i;
 console.log(arr[i]);
-}}; 
+}}
+; 
