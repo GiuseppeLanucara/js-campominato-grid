@@ -1,31 +1,21 @@
-const mybtn = document.getElementById("mybtn");
-const mytbl = document.getElementById("mytbl");
-const mysquares = document.getElementById("mysquares");
+const numbers = 100;
+const generatedNumbers = generateProgressiveNumber(numbers);
 
-mybtn.addEventListener("click", function () {
-
-    const table = mytbl.classList;
-    table.add("block");
-
-    const numbers = 100;
-    const numbersGenerated = generateProgressiveNumber(numbers);
-    // console.log(numbersGenerated);
-
-    const grid = document.querySelector(".block");
-for (let i = 0; i < numbersGenerated.length; i++) {
-  const thisNumber = numbersGenerated[i];
-  // Creo un elemnto square
-  const thisSquare = createSquare(thisNumber);
-  // aggiungo eventListener allo square creato
-  thisSquare.addEventListener("click", function() {
-    // inserisco l'elemento nel DOM
-  grid.append(thisSquare);
-  });
-
-  
-}
+const myBtn = document.getElementById("mybtn");
+myBtn.addEventListener("click", function() {
+    let grid = ""
+    grid = document.querySelector(".grid");
+     
     
-})    
+    for (let i = 0; i < generatedNumbers.length; i++) {
+     const Number = generatedNumbers[i];
+
+    const Square = newSquare(Number);
+    Square.addEventListener("click", numbeColorChange);
+
+    grid.append(Square);
+}})
+
 
 /**
  * Description: La funzione che genera numeri progressivi da 1 a 100
@@ -43,15 +33,23 @@ for (let i = 0; i < numbersGenerated.length; i++) {
   }
 
 
-
-  /**
- * Description: La funzione che crea l'elemento square da inserire nel dom
- * @param {number} innerNumber -> numero da inserire all'interno del square
+ /**
+ * Description: La funzione crea i singoli square
+ * @param {number} insideNumber -> numero da inserire all'interno di square
  * @returns {object} elemento DOM che rappresenta lo square
  */
-function createSquare(innerNumber) {
+function newSquare(insideNumber) {
     const newSquare = document.createElement("div");
-    newSquare.classList.add("squares");
-    newSquare.innerHTML = innerNumber;
+    newSquare.classList.add("square");
+    newSquare.innerHTML = insideNumber;
     return newSquare;
   }
+
+
+  /**
+ * Description: La funzione che aggiunge il colore verde al click sullo square
+ */
+function numbeColorChange() {
+    const clickedNumber = (this.textContent);
+        this.classList.add("green");
+    }

@@ -48,7 +48,7 @@ header {
     height: 50px;
 }
 
-#my-btn {
+#mybtn {
     padding: 10px;
     border-radius: 10px;
     border-color: lightseagreen;
@@ -63,11 +63,17 @@ main {
     background-color: aqua;
 }
 
-.container-main {
+.grid {
+    border: 2px solid black;
     width: 600px;
     height: 600px;
-    margin-top: 50px ;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -85,13 +91,17 @@ footer {
     border: 1px solid black;
 }
 
-.squares {
+.square {
     width: calc(100% / 10);
     height: calc(100% / 10);
     background-color: white;
-    border: 2px solid blue;
+    border: 1px solid rgb(21, 83, 80);
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.green {
+    background-color: green;
 }
