@@ -32,5 +32,5 @@ mybtn.addEventListener("click", function () {
     for (i = n; i <= 100; i++) {
       arrayLength[i] = i;
       console.log(arr[i]);
-    }
+    } return arrayLength
   }
