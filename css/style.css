@@ -68,8 +68,6 @@ main {
     height: 600px;
     margin-top: 50px ;
     margin-bottom: 50px;
-    /* DEBUG */
-    border: 2px solid black;
 }
 
 footer {
@@ -83,5 +81,17 @@ footer {
     margin-left: 10px;
 }
 
-#marked {
+.block {
+    border: 1px solid black;
+}
+
+.square {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    background-color: white;
+    border: 2px solid blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
