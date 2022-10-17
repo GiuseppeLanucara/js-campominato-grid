@@ -3,11 +3,12 @@ const generatedNumbers = generateProgressiveNumber(numbers);
 
 const myBtn = document.getElementById("mybtn");
 myBtn.addEventListener("click", function() {
-    let grid = ""
+
+    let grid = "";
     grid = document.querySelector(".grid");
-     
-    
+
     for (let i = 0; i < generatedNumbers.length; i++) {
+
      const Number = generatedNumbers[i];
 
     const Square = newSquare(Number);
