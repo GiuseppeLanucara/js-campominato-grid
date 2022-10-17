@@ -1,3 +1,7 @@
+const mybtn = document.getElementById("mybtn");
+const mytbl = document.getElementById("mytbl");
+const myquares = document.getElementById("mysquares");
+
 mybtn.addEventListener("click", function () {
 
     const table = mytbl.classList;
@@ -11,7 +15,7 @@ mybtn.addEventListener("click", function () {
         squares.add("square");
         i++
     }
-    
+})    
 
 
 // })
@@ -21,10 +25,11 @@ mybtn.addEventListener("click", function () {
  * @returns {Array} Array di numeri in ordine progressivo da 1 a 100
  */
  function generateProgressiveNumber(arrayLength) {
-let n=1;
-let arr=[n];
-for (i=n;i<=100;i++) {
-arr[i]=i;
-console.log(arr[i]);
-}}
-; 
+    let n = 1;
+    let arrayLength = [n];
+  
+    for (i = n; i <= 100; i++) {
+      arr[i] = i;
+      console.log(arr[i]);
+    }
+  }
