@@ -85,7 +85,7 @@ footer {
     border: 1px solid black;
 }
 
-.square {
+.squares {
     width: calc(100% / 10);
     height: calc(100% / 10);
     background-color: white;
