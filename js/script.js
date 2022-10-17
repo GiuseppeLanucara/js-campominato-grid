@@ -8,8 +8,9 @@ mybtn.addEventListener("click", function () {
     table.add("block");
 
     const numbers = 100;
+    const numbersGenerated = generateProgressiveNumber(numbers);
 
-    for (let i = 1; i <= numbers; i++) {
+    for (let i = 1; i < numbersGenerated.length; i++) {
         
         const squares = mysquares.classList;
         squares.add("square");
@@ -29,7 +30,7 @@ mybtn.addEventListener("click", function () {
     let arrayLength = [n];
   
     for (i = n; i <= 100; i++) {
-      arr[i] = i;
+      arrayLength[i] = i;
       console.log(arr[i]);
     }
   }
