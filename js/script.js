@@ -1,10 +1,11 @@
 const numbers = 100;
 const generatedNumbers = generateProgressiveNumber(numbers);
-
+const difficultLevel = document.getElementById("livelli")
 const myBtn = document.getElementById("mybtn");
+
 myBtn.addEventListener("click", function() {
 
-    let grid = "";
+    let grid = document.querySelector(".grid").innerHTML ="";
     grid = document.querySelector(".grid");
 
     for (let i = 0; i < generatedNumbers.length; i++) {
@@ -53,4 +54,5 @@ function newSquare(insideNumber) {
 function numbeColorChange() {
     const clickedNumber = (this.textContent);
         this.classList.add("green");
+        console.log(this.textContent);
     }
